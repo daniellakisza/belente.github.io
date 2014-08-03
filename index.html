@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belen Tenorio</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>
+      * {
+        cursor: url(images/cursor.png), auto;
+      }
+
+      header {
+        height: 200px;
+      }
+
+      .project {
+        background-color: #5819EB;
+        width: 250px;
+        height: 250px;
+      }
+
+      .project img {
+        opacity: .5;
+        width: 250px;
+        height: 250px;
+      }
+
+      .project img:hover {
+        opacity: 1;
+        z-index: 100;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo pull-right"><img src="images/logo.jpg" /></div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="project"><a href="#adobe"><img src="images/adobe.jpg" /></a></div>
+        <div class="project"><a href="#ibm"><img src="images/ibm.jpg" /></a></div>
+        <div class="project"><a href="#instasnapus"><img src="images/instasnapus.jpg" /></a></div>
+        <div class="project"><a href="#lacma"><img src="images/lacma.jpg" /></a></div>
+        <div class="project"><a href="#bauer"><img src="images/bauer.jpg" /></a></div>
+        <div class="project"><a href="#stubhub"><img src="images/stubhub.jpg" /></a></div>
+        <div class="project"><a href="#covergirl"><img src="images/covergirl.jpg" /></a></div>
+        <div class="project"><a href="#sharperimage"><img src="images/sharperimage.jpg" /></a></div>
+        <div class="project"><a href="#hrblock"><img src="images/hrblock.jpg" /></a></div>
+        <div class="project"><a href="#chutney"><img src="images/chutney.jpg" /></a></div>
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type='text/javascript'>
+      $(document).ready(function() {
+          positionProjects();
+      });
+
+      function positionProjects() {
+        $('.project').each(function(index, element) {
+          $(this).css('position', 'relative');
+          $(this).css('top', (index * -200))
+          $(this).css('left', (index * 100))
+          $(this).find('img').css('z-index', index)
+        });
+      }
+
+    </script>
+  </body>
+</html>
